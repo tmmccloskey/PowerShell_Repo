@@ -27,6 +27,7 @@ foreach ($ServiceName in $ServicesToMonitor) {
         }
     } catch {
         Write-Host "Error processing service '$ServiceName': $($_.Exception.Message)" -ForegroundColor Red
+        "*" | Out-File -FilePath "C:\ServiceCheck.log" -Encoding UTF8
     }
 }
-)s
+)
