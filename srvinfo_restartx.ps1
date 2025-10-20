@@ -18,12 +18,12 @@ foreach ($ServiceName in $ServicesToMonitor) {
             $Service.Refresh()
             
             if ($Service.Status -eq "Running") {
-                Write-Host "  ✅ $ServiceName STARTED!" -ForegroundColor Green
+                Write-Host " 👑 $ServiceName STARTED!" -ForegroundColor Green
             } else {
                 Write-Host "  ❌ $ServiceName FAILED!" -ForegroundColor Red
             }
         } else {
-            Write-Host "  ✅ $ServiceName RUNNING" -ForegroundColor Green
+            Write-Host "  👑 $ServiceName RUNNING" -ForegroundColor Green
         }
     }
     catch {
